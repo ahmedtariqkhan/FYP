@@ -2,7 +2,11 @@ package com.example.fyp_kitchen;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+
+import com.example.fyp_kitchen.helper.ImageHelperActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -10,6 +14,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        int hi = 2;
+    }
+
+    public void onGotoImageActivity(View view){
+        //Start the image helper activity
+        Intent intent = new Intent(this, ImageHelperActivity.class);
+        startActivity(intent);
     }
 }
