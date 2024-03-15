@@ -16,9 +16,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void onGotoImageActivity(View view){
-        //Start the image helper activity
-        Intent intent = new Intent(this, ImageHelperActivity.class);
-        startActivity(intent);
+    public void onGotoImageActivity(View view) {
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            requestPermissions(new string[]{Manifest.permission.READ_EXTERNAL_STORAGE}.requestcode 0);
+        }
     }
 }
