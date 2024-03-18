@@ -21,5 +21,6 @@ public class MainActivity extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             requestPermissions(new string[]{Manifest.permission.READ_EXTERNAL_STORAGE}.requestcode 0);
         }
+        int a = 0;
     }
 }
